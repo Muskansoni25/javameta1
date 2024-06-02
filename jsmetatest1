@@ -1,0 +1,27 @@
+let nfttravel = [];
+function mintNFT(destination_name, distance, priority) {
+    const nft = {
+        destination_name: destination_name,
+        distance: distance,
+        priority: priority
+    };
+
+    nfttravel.push(nft);
+    console.log("minted: " + destination_name);
+}
+function listNFTs() {
+    for (let i = 0; i < nfttravel.length; i++) {
+        console.log("\nDestination: " + nfttravel[i].destination_name);
+        console.log("Distance: " + nfttravel[i].distance);
+        console.log("Priority: " + nfttravel[i].priority);
+    }
+}
+function getTotalSupply() {
+    console.log("\n" + nfttravel.length);
+}
+
+mintNFT("Manali", 100, 1);
+mintNFT("kashmir", 200, 2);
+mintNFT("New York", 300, 3);
+listNFTs();
+getTotalSupply();
